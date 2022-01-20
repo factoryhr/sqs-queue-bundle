@@ -22,6 +22,11 @@ class Message
      * @var array
      */
     private $attributes;
+    
+    /**
+     * @var array
+     */
+    private $messageAttributes = [];
 
     /**
      * @var string
@@ -114,6 +119,26 @@ class Message
     public function setAttributes(array $attributes)
     {
         $this->attributes = $attributes;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getMessageAttributes(): array
+    {
+        return $this->messageAttributes;
+    }
+
+    /**
+     * @param array $attributes
+     *
+     * @return Message
+     */
+    public function setMessageAttributes(array $attributes)
+    {
+        $this->messageAttributes = $attributes;
 
         return $this;
     }
