@@ -142,7 +142,7 @@ class BaseQueue
                         ->setId($message['MessageId'])
                         ->setBody($message['Body'])
                         ->setReceiptHandle($message['ReceiptHandle'])
-                        ->setAttributes($message['Attributes'])
+                        ->setAttributes($message['MessageAttributes'])
                 );
             }
         } catch (AwsException $e) {
